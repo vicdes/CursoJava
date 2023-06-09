@@ -1,6 +1,6 @@
 package Entities;
 public class BankAccount {
-    private double accountNumber;
+    private int accountNumber;
     private String name;
     private double accountBalance;
 
@@ -9,10 +9,15 @@ public class BankAccount {
         return name;
     }
 
-    public BankAccount(double accountNumber, String name, double initialDeposit){
+    public BankAccount(int accountNumber, String name, double initialDeposit){
         this.accountNumber = accountNumber;
         this.name = name;
         deposit(initialDeposit);
+    }
+
+    public BankAccount(int accountNumber, String name){
+        this.accountNumber = accountNumber;
+        this.name = name;
     }
 
     public void setName(String name) {
